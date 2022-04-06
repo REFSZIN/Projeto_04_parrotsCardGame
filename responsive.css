@@ -13,6 +13,7 @@
         max-width: 580px;
         height: 100%;
         margin-top: 200px;
+        margin-bottom: 10px;
     }
     section{
         max-width: 570px;
@@ -29,6 +30,39 @@
         max-width: 130px;
         height: 200px;
     }
+}@media only screen and (max-width: 585px){
+    body{
+        max-width: 500px;
+        height: 100%;
+    }
+    header{
+        max-width: 250px;
+        height: 63px;
+        top: 20px;
+        font-size: 40px;
+    }
+    main{
+        max-width: 420px;
+        height: 100%;
+        margin-top: 250px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    section{
+        max-width: 410px;
+        height: 100%;
+        margin-top: 5px ;
+        margin-bottom: 5px;
+    }
+    article{
+        max-width: 157px;
+        height: 170px;
+    }
+    img{
+        padding-bottom: 25px;
+        max-width: 130px;
+        height: 150px;
+    }
 }
 @media only screen and (max-width: 425px){
     body{
@@ -36,7 +70,7 @@
         height: 100%;
     }
     header{
-        max-width: 230px;
+        max-width: 250px;
         height: 63px;
         top: 40px;
         font-size: 40px;
@@ -44,7 +78,8 @@
     main{
         max-width: 220px;
         height: 100%;
-        margin-top: 200px;
+        margin-top: 300px;
+        margin-bottom: 10px;
     }
     section{
         max-width: 210px;
