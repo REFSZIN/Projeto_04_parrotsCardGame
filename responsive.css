@@ -28,7 +28,7 @@
     img{
         padding-bottom: 25px;
         max-width: 130px;
-        height: 200px;
+        height: 150px;
     }
 }@media only screen and (max-width: 585px){
     body{
@@ -75,11 +75,28 @@
         top: 40px;
         font-size: 40px;
     }
-    main{
+    main{   
         max-width: 220px;
         height: 100%;
         margin-top: 300px;
         margin-bottom: 10px;
+        place-content: center;
+        font-size: 10px;
+    }
+    .inicards{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size:40px;
+        line-height: 66px;
+        letter-spacing: -0.004em;
+        color: #648782;
+        text-align: center;
+        border-radius: 100px;
+        width: 90%;
+        height: 30%;
+        background-color:#A7E9AF ;
+        place-content: center;
     }
     section{
         max-width: 210px;
