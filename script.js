@@ -6,6 +6,7 @@
     let mesa =  document.querySelector("main > section");
     let config = document.querySelector("main > div")
     let baralho = [];
+
 function configs(){
     qntcards = Number(prompt("Quantas Cartas Deseja ? Em pares (4) a (14)!"));
     while(qntcards %2 !== 0 || qntcards < 4|| qntcards>14){
@@ -18,7 +19,6 @@ function configs(){
 }
 function baralhocartas(){
     baralho = cartas.slice(0,qntcards);
-    console.log(baralho);
     baralhado();
     return baralho;
 }
@@ -29,8 +29,6 @@ function baralhado(){
 }
 function embaralhador(embaralhado){
     const baralhobaralhado = baralho.sort(embaralhado);
-    console.log(baralhobaralhado)
-    console.log(embaralhado);
     mesapronta(baralhobaralhado);
 }
 function mesapronta(baralhobaralhado){
@@ -41,8 +39,6 @@ function mesapronta(baralhobaralhado){
             <div class="back esconder"><img src='assets/${baralhobaralhado[y]}.gif' alt="parrot" title="parrot"></div> 
         </article>`}
 }
-function selecionarCard (cardx){
-    document.getElementsByClassName("article.card > .front").classList.add("esconder");
-    document.getElementsByClassName("article.card > .back").classList.remove("esconder")
-    document.getElementsByClassName("article.card > .back").classList.add("selecionado");
+function selecionarCard (card){
+
 }
