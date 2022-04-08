@@ -57,6 +57,7 @@ function configs() {
     cron();
     musica.play()
     musica.currentTime = 30;
+    musica.volume =0.2;
 }
 function mesapronta(baralhobaralhado) {
     for (let y = 0; y < embaralhado.length; y++) {
