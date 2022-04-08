@@ -81,14 +81,18 @@ async function selecionarCard(card) {
     }
     finalizar()
 }
-function finalizar(){
+async function finalizar(){
     let confqntcards = document.getElementsByClassName("card virar");
     if(qntcards == confqntcards.length){
-        console.log(confqntcards)
-        document.getElementsByTagName("section").innerHTML= "replaced";
+        await sleep(2500);
         mesa.classList.remove("selecionado");
-        config.classList.add("selecionado");
-        inicards.classList.add("esconder");
+        config.classList.remove("esconder");
+        recards.classList.add("selecionado")
+        inicards.classList.add("esconder")
+        reconfig()
         }
     }
-    //FALTA DAR 1 SEGFUNDO DE TEMPO PRA VER E REINICIAR O GAME 
+    
+recards.addEventListener("click", function reconfig(){
+    location.reload();
+})
