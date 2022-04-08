@@ -24,6 +24,7 @@ let mesa = document.querySelector("main > section");
 let config = document.querySelector("main > div");
 let recards = document.querySelector("input.recards")
 let inicards = document.querySelector("input.inicards")
+let confqntcards = document.getElementsByClassName("card virar");
 let baralho = [];
 let embaralhado = [];
 
@@ -87,11 +88,7 @@ function finalizar(){
         document.getElementsByTagName("section").innerHTML= "replaced";
         mesa.classList.remove("selecionado");
         config.classList.add("selecionado");
-        recards.classList.add("selecionado");
         inicards.classList.add("esconder");
-        reconfig()
         }
     }
-function reconfig(){
-
-}
+    //FALTA DAR 1 SEGFUNDO DE TEMPO PRA VER E REINICIAR O GAME 
