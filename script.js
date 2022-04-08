@@ -17,19 +17,26 @@ const cartas = [
 let firstcard = 0;
 let cardSelecionado;
 let qntcards = 0;
+let jogadas = 0;
+let minutos = document.getElementById('minutos').innerText = "00";
+let segundos =document.getElementById('segundos').innerText = "00";
 let card = document.querySelectorAll("article.card");
 let front = document.querySelectorAll("article.card > .front");
 let back = document.querySelectorAll("article.card > .back");
 let mesa = document.querySelector("main > section");
-let config = document.querySelector("main > div");
-let recards = document.querySelector("input.recards")
-let inicards = document.querySelector("input.inicards")
+let config = document.querySelector("main > div.configcards");
+let recards = document.querySelector("input.recards");
+let inicards = document.querySelector("input.inicards");
 let confqntcards = document.getElementsByClassName("card virar");
 let baralho = [];
 let embaralhado = [];
 
 async function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
+    
+}
+function comparador() {
+    return Math.random() - 0.5;
 }
 function configs() {
     qntcards = Number(prompt("Quantas Cartas Deseja ? Em pares (4) a (14)!"));
@@ -38,19 +45,11 @@ function configs() {
     }
     mesa.classList.add("selecionado");
     config.classList.add("esconder");
-    baralhocartas();
-}
-function baralhocartas() {
     baralho = cartas.slice(0, qntcards);
-    baralhado();
-}
-function comparador() {
-    return Math.random() - 0.5;
-}
-function baralhado() {
     embaralhado = baralho.sort(comparador);
     embaralhado.sort(comparador);
     mesapronta(embaralhado);
+    timer();
 }
 function mesapronta(baralhobaralhado) {
     for (let y = 0; y < embaralhado.length; y++) {
@@ -66,6 +65,7 @@ async function selecionarCard(card) {
     card.classList.add("virar");
     cardSelecionado = card;
     firstcard++;
+    jogadas+=2;
     return;
     }
     if (card != cardSelecionado && firstcard == 1) {
@@ -84,15 +84,17 @@ async function selecionarCard(card) {
 async function finalizar(){
     let confqntcards = document.getElementsByClassName("card virar");
     if(qntcards == confqntcards.length){
-        await sleep(2500);
+        await sleep(2000);
         mesa.classList.remove("selecionado");
         config.classList.remove("esconder");
-        recards.classList.add("selecionado")
-        inicards.classList.add("esconder")
-        reconfig()
+        recards.classList.add("selecionado");
+        inicards.classList.add("esconder");
+        alert(`Você ganhou em ${jogadas} jogadas!`);
         }
+    recards.addEventListener("click", function reconfig(){
+        location.reload();
+    })
     }
-    
-recards.addEventListener("click", function reconfig(){
-    location.reload();
-})
+function timer(){
+
+}

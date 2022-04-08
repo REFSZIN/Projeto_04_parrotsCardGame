@@ -109,6 +109,21 @@ img {
     width: 140px;
     height: 150px;
 }
+h2{
+    position: absolute;
+    width: 580px;
+    height: 63px;
+    top: 300px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+    color: #000000;
+    text-align: center;
+    margin: 10px;
+}
 .card {
     transition: all 0.5s;
     transform-style: preserve-3d;
