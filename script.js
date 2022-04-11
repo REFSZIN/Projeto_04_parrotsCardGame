@@ -37,11 +37,9 @@ let embaralhado = [];
 
 async function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
-    
 }
 function comparador() {
     return Math.random() - 0.5;
-    
 }
 function configs() {
     qntcards = Number(prompt("Quantas Cartas Deseja ? Em pares (4) a (14)!"));
@@ -112,7 +110,7 @@ async function finalizar(){
         segundos=0;
         document.getElementById('minuto').innerHTML=minutos;
         }
-        document.getElementById('segundo').innerHTML=segundos;
+    document.getElementById('segundo').innerHTML=segundos;
     }
     cronometro = setInterval(function(){ segundo() },1000)
 }
